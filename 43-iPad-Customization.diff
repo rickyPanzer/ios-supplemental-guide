@@ -28,7 +28,7 @@ blocstagram/CropImageViewController.m
 +    [self.scrollView removeGestureRecognizer:self.tap];
 }
 
-- (void) viewWillLayoutSubviews {
+ - (void) viewWillLayoutSubviews {
 
 
 
@@ -39,7 +39,7 @@ blocstagram/MediaFullScreenViewController.h
 @property (nonatomic, strong) Media *media;
 + @property (nonatomic, strong) UITapGestureRecognizer *tap;
 
-- (instancetype) initWithMedia:(Media *)media;
+ - (instancetype) initWithMedia:(Media *)media;
 
 
 
