@@ -13,8 +13,8 @@ blocstagram/MediaFullScreenViewController.m
 }
 
 + - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
-    return true;
-}
++    return true;
++}
 
 @end 
 
