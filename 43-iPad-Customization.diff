@@ -25,10 +25,12 @@ blocstagram/CropImageViewController.m
     self.bottomView.alpha = 0.5;
     [self.view addSubview:self.topView];
     [self.view addSubview:self.bottomView];
-    [self.scrollView removeGestureRecognizer:self.tap];
++    [self.scrollView removeGestureRecognizer:self.tap];
 }
 
 - (void) viewWillLayoutSubviews {
+
+
 
 blocstagram/MediaFullScreenViewController.h
 @@ -15,6 +15,7 @@
