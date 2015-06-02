@@ -1,3 +1,41 @@
+@@ -11,7 +11,7 @@
+#import "ShareUtility.h"
+
+- @interface MediaFullScreenViewController () <UIScrollViewDelegate>
++ @interface MediaFullScreenViewController () <UIScrollViewDelegate, UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) UITapGestureRecognizer *tap;
+@property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
+
+@@ -210,4 +211,16 @@
+    }
+}
+
++ - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
+    return true;
+}
+
+@end 
+
+blocstagram/CropImageViewController.m
+@@ -65,6 +65,7 @@
+    self.bottomView.alpha = 0.5;
+    [self.view addSubview:self.topView];
+    [self.view addSubview:self.bottomView];
+    [self.scrollView removeGestureRecognizer:self.tap];
+}
+
+- (void) viewWillLayoutSubviews {
+
+blocstagram/MediaFullScreenViewController.h
+@@ -15,6 +15,7 @@
+@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong) UIImageView *imageView;
+@property (nonatomic, strong) Media *media;
++ @property (nonatomic, strong) UITapGestureRecognizer *tap;
+
+- (instancetype) initWithMedia:(Media *)media;
+
 blocstagram/MediaFullScreenViewController.m
 @@ -13,7 +13,7 @@
 
