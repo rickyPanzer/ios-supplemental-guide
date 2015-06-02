@@ -1,3 +1,4 @@
+blocstagram/MediaFullScreenViewController.m
 @@ -11,7 +11,7 @@
 #import "ShareUtility.h"
 
@@ -17,6 +18,8 @@
 
 @end 
 
+
+
 blocstagram/CropImageViewController.m
 @@ -65,6 +65,7 @@
     self.bottomView.alpha = 0.5;
@@ -35,6 +38,8 @@ blocstagram/MediaFullScreenViewController.h
 + @property (nonatomic, strong) UITapGestureRecognizer *tap;
 
 - (instancetype) initWithMedia:(Media *)media;
+
+
 
 blocstagram/MediaFullScreenViewController.m
 @@ -13,7 +13,7 @@
